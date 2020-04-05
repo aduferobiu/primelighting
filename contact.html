@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="css/w3.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
+        
+        body,
+        html {
+            height: 100%;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar  w3-white w3-card" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="images/prime.png" alt="comapny_logo" width="110px" </a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small">
+                    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+                    <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+                    <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+                    <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+                    <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+                    <a href="contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+                </div>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                    <img src="images/menu.png" alt="menu" width="20px">
+                </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card  w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+        <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+        <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-light-grey w3-row" style="padding:128px 16px" id="contact">
+        <h3 class="w3-center">CONTACT</h3>
+        <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+        <div style="margin-top:48px">
+            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right w3-leftbar w3-border-black"></i> 24, Moshalashi Street off Mushin bustop,Lagos.</p>
+            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right w3-leftbar w3-border-black"></i> Phone: +234 7033244037</p>
+            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right w3-leftbar w3-border-black"> </i> Email: Banjotemitope@mail.com</p>
+            <p class="w3-border-bottom w3-border-dark-grey"></p>
+            <br>
+
+            <form action="info@primeelightining.com" target="_blank">
+                <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+                <p>
+                    <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+                </p>
+            </form>
+            <!-- Image of location/map -->
+
+        </div>
+    </div>
+    <div>
+        <img src="../w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#" class="w3-button w3-light-grey" style=""><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>Follow us on social media</p>
+        <div class="social-media">
+            <a href="https://web.facebook.com/?_rdc=1&_rdr"><img src="images/face.png" width="40px" height="40px" alt="facebook" title="facebook"></a>
+            <a href=""><img src="images/twitter.png" width="40px" height="40px" alt="twitter" title="Twitter"></a>
+            <a href=""><img src="images/google.png" width="40px" height="40px" alt="Google" title="Google"></a>
+            <a href="linkdenn.com"><img src="images/linkdenn.png" width="40px" height="40px" alt="linkedln" title="linkedln"></a>
+        </div>
+        <p>copyright &copy; 2019, Prime lighting</p>
+    </footer>
+
+    <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

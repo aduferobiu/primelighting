@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<title>Prime lighting</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif
+    }
+    
+    body,
+    html {
+        height: 100%;
+        line-height: 1.8;
+    }
+    /* Full height image header */
+    
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("images/desert.jpg");
+        min-height: 100%;
+    }
+    
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
+    
+    .mySlides {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar  w3-white w3-card" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="images/prime.png" alt="comapny_logo" width="110px"> </a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+                <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+                <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+                <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+                <a href="contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <img src="images/menu.png" alt="menu" width="20px">
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card  w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+        <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+        <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container " id="home">
+        <div class="w3-display-left w3-text-white " style="padding:48px">
+            <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+            <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+            <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+        </div>
+        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+    </header>
+
+
+
+    <!-- Promo Section - "We know design" -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px">
+        <div class="w3-row-padding">
+            <div class="w3-col m6">
+                <h3>We know design.</h3>
+                <p>We have worked different firms over the years. <br>click the button below to view more of our works</p>
+                <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+            </div>
+            <div class="w3-col m6">
+                <img class="w3-image w3-round-large" src="images/road.jpg" alt="Buildings" width="700" height="394">
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="w3-container" style="padding:128px 16px" id="team">
+        <h3 class="w3-center" style="border-bottom:3px solid black ;">THE TEAM</h3>
+        <p class="w3-center w3-large">The ones who runs this company</p>
+        <div class="w3-row-padding " style="margin-top:64px">
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card ">
+                    <img src="images/business.jpg" alt="Banjo" style="width:100%" class="w3-hover-greyscale">
+                    <div class="w3-container w3-center w3-padding-small" id="founder" style="display: none;">
+                        <a href="#"><img src="images/face.png" alt="Facebook" title="facebook" width="40px"></a>
+                        <a href="#"><img src="images/instagram.png" alt="instagram" title="intagram" width="40px"></a>
+                        <a href="#"><img src="images/linkdenn.png" alt="linkdenn" title="linkdenn" width="40px"></a>
+
+                    </div>
+                    <div class="w3-container">
+                        <h3>Banjo Temitope</h3>
+                        <p class="w3-opacity">CEO & Founder</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                        <p><button class="w3-button w3-black w3-block" onclick="myFunction('founder')"><i class="fa fa-envelope"></i> Contact</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="images/sima.jpg" alt="Jane" style="width:100%" class="w3-hover-greyscale">
+                    <div class="w3-container w3-center w3-padding-small" id="director" style="display: none;">
+                        <a href="#"><img src="images/face.png" alt="Facebook" title="facebook" width="40px"></a>
+                        <a href="#"><img src="images/instagram.png" alt="instagram" title="intagram" width="40px"></a>
+                        <a href="#"><img src="images/linkdenn.png" alt="linkdenn" title="linkdenn" width="40px"></a>
+
+                    </div>
+                    <div class="w3-container">
+                        <h3>Ife Ademola</h3>
+                        <p class="w3-opacity">Creative Director</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                        <p><button class="w3-button w3-black w3-block" onclick="myFunction('director')"><i class="fa fa-envelope"></i> Contact</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="images/collins.jpg" alt="Mike" style="width:100%" class="w3-hover-greyscale">
+                    <div class="w3-container w3-center w3-padding-small" id="content" style="display: none;">
+                        <a href="#"><img src="images/face.png" alt="Facebook" title="facebook" width="40px"></a>
+                        <a href="#"><img src="images/instagram.png" alt="instagram" title="intagram" width="40px"></a>
+                        <a href="#"><img src="images/linkdenn.png" alt="linkdenn" title="linkdenn" width="40px"></a>
+
+                    </div>
+                    <div class="w3-container">
+                        <h3>Mike Ross</h3>
+                        <p class="w3-opacity">Web Designer</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                        <p><button class="w3-button w3-black w3-block" onclick="myFunction('content')"><i class="fa fa-envelope"></i> Contact</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="images/franklin.jpg" alt="Dan" style="width:100%" class="w3-hover-greyscale">
+                    <div class="w3-container w3-center w3-padding-small" id="customer" style="display: none;">
+                        <a href="#"><img src="images/face.png" alt="Facebook" title="facebook" width="40px"></a>
+                        <a href="#"><img src="images/instagram.png" alt="instagram" title="intagram" width="40px"></a>
+                        <a href="#"><img src="images/linkdenn.png" alt="linkdenn" title="linkdenn" width="40px"></a>
+
+                    </div>
+                    <div class="w3-container">
+                        <h3>Dan Star</h3>
+                        <p class="w3-opacity">Designer</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                        <p><button class="w3-button w3-black w3-block" onclick="myFunction('customer')"><i class="fa fa-envelope"></i> Contact</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promo Section "Statistics" -->
+    <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+        <div class="w3-quarter">
+            <span class="w3-xxlarge">14+</span>
+            <br>Partners
+        </div>
+        <div class="w3-quarter">
+            <span class="w3-xxlarge">55+</span>
+            <br>Projects Done
+        </div>
+        <div class="w3-quarter">
+            <span class="w3-xxlarge">89+</span>
+            <br>Happy Clients
+        </div>
+        <div class="w3-quarter">
+            <span class="w3-xxlarge">150+</span>
+            <br>Meetings
+        </div>
+    </div>
+
+
+
+    <!-- Work Section -->
+    <div class="w3-container" style="padding:128px 16px" id="work">
+        <h3 class="w3-center">OUR WORK</h3>
+        <p class="w3-center w3-large">What we've done for indidviduals and firms.</p>
+
+        <div class="w3-row-padding" style="margin-top:64px">
+            <div class="w3-col l3 m6">
+                <img src="images/led_displays (1).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Signage">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="images/led_displays (2).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Signage">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="images/led_displays (3).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A LED display">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="images/led_displays (4).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A LED display">
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-section">
+            <div class="w3-col l3 m6">
+                <img src="images/led_displays (5).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A LED display">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="images/led_displays (6).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Signage">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="images/led_displays (7).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A LED display">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="images/led_displays (1).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Signage">
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+
+    <div class="w3-panel w3-padding-16 w3-black  w3-card w3-hover-opacity-off">
+        <h2>Get the best offers first!</h2>
+        <p>Join our newsletter.</p>
+        <label>E-mail</label>
+        <input class="w3-input w3-border" type="text" placeholder="Your Email address">
+        <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button>
+    </div>
+
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+    <!--Testimonies-->
+    <div class="w3-container w3-center w3-padding ">
+        <h2>TESTIMONIES</h2>
+        <div class="mySlides ">
+            <p class="w3-xlarge w3-serif">"It has been my pleasure working with prime lighting <br>They module are of good Qualities and i have been <br> using mine 3 years from now"</p>
+            <img src="images/Andrei.jpg" alt="MD" class="w3-circle" width="100px" style="padding: 10px 0;">
+            <h5 class="w3-center">MD oando filling agura Brand</h5>
+        </div>
+        <div class="mySlides ">
+            <p class="w3-xlarge w3-serif">"It has been my pleasure working with prime lighting <br>They module are of good Qualities and i have been <br> using mine 3 years from now"</p>
+            <img src="images/Andrei.jpg" alt="MD" class="w3-circle" width="100px" style="padding: 10px 0;">
+            <h5 class="w3-center">MD oando okuta ground</h5>
+        </div>
+        <div class="mySlides ">
+            <p class="w3-xlarge w3-serif">"It has been my pleasure working with prime lighting <br>They module are of good Qualities and i have been <br> using mine 3 years from now"</p>
+            <img src="images/Andrei.jpg" alt="MD" class="w3-circle" width="100px" style="padding: 10px 0;">
+            <h5 class="w3-center">MD keynote filling fidesing Brand</h5>
+        </div>
+
+    </div>
+
+    <!-- Skills Section -->
+    <div class="w3-container w3-light-grey w3-padding-64">
+        <div class="w3-row-padding">
+            <div class="w3-col m6">
+                <h3>Our Skills.</h3>
+                <p>We have been in the industry for for decade designing a durable LED light.</p>
+                <p>Here is a rating generated from our past works.</p>
+            </div>
+            <div class="w3-col m6">
+                <p class="w3-wide">LED displays</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-center" style="width:95%">95%</div>
+                </div>
+                <div style="padding-top:20px;">
+                    <p class="w3-wide">Signage</p>
+                    <div class="w3-grey">
+                        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+        <h3>PRICING</h3>
+        <p class="w3-large">Choose a pricing plan that fits your needs.</p>
+        <div class="w3-row-padding" style="margin-top:64px">
+            <div class="w3-third w3-section">
+                <ul class="w3-ul w3-white w3-hover-shadow">
+                    <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+                    <li class="w3-padding-16"><b>10GB</b> Storage</li>
+                    <li class="w3-padding-16"><b>10</b> Led lights</li>
+                    <li class="w3-padding-16"><b>Endless</b> Support</li>
+                    <li class="w3-padding-16">
+                        <h2 class="w3-wide">N20000</h2>
+                        <span class="w3-opacity">with 2 months warranty</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <a href="contact.html"><button class="w3-button w3-black w3-padding-large w3-ripple">Sign Up</button></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w3-third">
+                <ul class="w3-ul w3-white w3-hover-shadow">
+                    <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
+                    <li class="w3-padding-16"><b>25GB</b> Storage</li>
+                    <li class="w3-padding-16"><b>25</b> Led lights</li>
+                    <li class="w3-padding-16"><b>Endless</b> Support</li>
+                    <li class="w3-padding-16">
+                        <h2 class="w3-wide">N30000</h2>
+                        <span class="w3-opacity">with 4 months warranty</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <a href="contact.html"><button class="w3-button w3-black w3-padding-large w3-ripple">Sign Up</button></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w3-third w3-section">
+                <ul class="w3-ul w3-white w3-hover-shadow">
+                    <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+                    <li class="w3-padding-16"><b>50GB</b> Storage</li>
+                    <li class="w3-padding-16"><b>50</b> Led lights</li>
+                    <li class="w3-padding-16"><b>Endless</b> Support</li>
+                    <li class="w3-padding-16">
+                        <h2 class="w3-wide">N50000</h2>
+                        <span class="w3-opacity">with 6 months warranty</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <a href="contact.html"><button class="w3-button w3-black w3-padding-large w3-ripple">Sign Up</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>Follow us on social media</p>
+        <div class="social-media">
+            <a href="https://web.facebook.com/?_rdc=1&_rdr"><img src="images/face.png" width="40px" height="40px" alt="facebook" title="facebook"></a>
+            <a href=""><img src="images/twitter.png" width="40px" height="40px" alt="twitter" title="Twitter"></a>
+            <a href=""><img src="images/google.png" width="40px" height="40px" alt="Google" title="Google"></a>
+            <a href="linkdenn.com"><img src="images/linkdenn.png" width="40px" height="40px" alt="linkedln" title="linkedln"></a>
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>copyright &copy; 2019, Prime lighting</p>
+        <p style="color:#333;">Powered by Pickat&reg;</p>
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+    </script>
+
+</body>
+
+</html>
